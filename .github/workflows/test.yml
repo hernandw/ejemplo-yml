@@ -23,6 +23,7 @@ jobs:
 
   other-job:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: LS 
         run: ls -all

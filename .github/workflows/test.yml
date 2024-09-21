@@ -9,6 +9,18 @@ jobs:
       - name: Checkout 
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 
+      - name: List files
+        run: |
+          ls -all
+
+      - name: touch file
+        run: |
+          touch test.txt
+
+      - name: Set text
+        run: |
+          echo "Hello World" > test.txt
+
   other-job:
     runs-on: ubuntu-latest
     steps:
